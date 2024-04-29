@@ -28,8 +28,10 @@ jobs:
     - name: Build docker image
       run: |
         docker build -t jfmtic/docker-graphql:0.0.2 .
+        docker build -t jfmtic/docker-graphql:latest .
 
     - name: Push docker image
       run: |
         docker push jfmtic/docker-graphql:0.0.2
+        docker push jfmtic/docker-graphql:latest
         
